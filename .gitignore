@@ -250,3 +250,7 @@ paket-files/
 # JetBrains Rider
 .idea/
 *.sln.iml
+/Travelling-salesman-problem/Properties
+/Travelling-salesman-problem/App.config
+/Travelling-salesman-problem/Travelling-salesman-problem.csproj
+/Travelling-salesman-problem/Travelling-salesman-problem.sln
