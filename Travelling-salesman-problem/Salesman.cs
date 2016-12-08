@@ -104,8 +104,21 @@ namespace Travelling_salesman_problem
                     }
                 }
             }
-            try { matrix[result[0], result[1]] = -2; } catch { };
-            if (step == 0) try { matrix[result[1], result[0]] = -2; } catch { };
+            for (int i = 1; i < matrix.GetLength(0); i++)
+            {
+                for (int j = 1; j < matrix.GetLength(0); j++)
+                {
+                    if (matrix[i, 0] == result[0] && matrix[0, j] == result[1])
+                    {
+                        matrix[i, j] = -2;
+                    }
+                    if (matrix[i, 0] == result[1] && matrix[0, j] == result[0])
+                    {
+                        matrix[i, j] = -2;
+                    }
+
+                }
+            }
             points.Add(result);
             step++;
             return result;
